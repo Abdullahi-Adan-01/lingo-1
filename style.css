@@ -1,0 +1,251 @@
+/* fonts */
+@font-face {
+    font-family: 'title';
+    src: url(/KGRedHands.ttf);
+}
+
+/* variables */
+:root {
+    --black-color: #212529;
+    --image-color: #FF9F1C;
+    --button-color: #2EC4B6;
+
+
+}
+
+/* global styling */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* header section including the media queries */
+header {
+    position: sticky;
+    top: 0;
+    background-color: rgba(240, 248, 255, 0.215);
+
+
+}
+
+nav {
+    /* background-color: #212529; */
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+
+
+}
+
+
+
+nav img {
+    width: 120px;
+    height: auto;
+}
+
+nav ul {
+    float: right;
+    flex-wrap: wrap;
+
+}
+
+li {
+
+    list-style: none;
+
+}
+
+.links {
+    display: flex;
+    gap: 5rem;
+
+}
+
+li a {
+    text-decoration: none;
+    color: var(--black-color);
+    /* color: white; */
+    font-size: 17px;
+
+
+}
+
+button {
+    border: none;
+    margin-right: 2rem;
+    background-color: var(--button-color);
+    padding: 8px 22px;
+    border-radius: 10px;
+    transition: all ease .3s;
+
+
+}
+
+button a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+
+
+
+}
+
+button:hover {
+    /* color: #fff;
+    background-color: #1A1A1A; */
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+
+button:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+nav .toggle-btn {
+    font-size: 1.5rem;
+    color: var(--black-color);
+    cursor: pointer;
+    display: none;
+    margin-right: .5rem;
+}
+
+/* dropdown-menu */
+.dropdown-menu {
+    display: none;
+    width: 90%;
+    margin: 0 auto;
+    height: 0;
+    background-color: rgba(240, 248, 255, .5);
+    backdrop-filter: blur(200px);
+    overflow: hidden;
+    border-radius: 10px;
+    transition: height .35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+
+
+}
+
+.dropdown-menu.open {
+    height: 70vh;
+
+
+}
+
+.dropdown-menu li {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown-menu .action-btn {
+    margin: 0 auto;
+    /* padding: 5px 15px; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* Responsive deign */
+@media only screen and (max-width:680px) {
+
+    .links,
+    nav button {
+        display: none;
+    }
+
+    nav .toggle-btn {
+        display: block;
+    }
+
+    nav img {
+        width: 100px;
+    }
+
+    .dropdown-menu {
+        display: block;
+    }
+}
+
+/* end of navbar */
+@media only screen and (max-width:680px) {
+
+    .hero {
+        margin-top: 3rem;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero h1 {
+        font-family: 'title';
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: lighter;
+        color: var(--black-color);
+        letter-spacing: 4%;
+        margin-bottom: 1rem
+    }
+
+    .hero img {
+        width: 350px;
+        height: auto;
+
+
+    }
+
+    .hero p {
+        width: 300px;
+        line-height: 3;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .btn-2 {
+        user-select: none;
+        margin: 2rem auto;
+        background-color: var(--button-color);
+        border: none;
+        border-radius: 10px;
+        color: white;
+        cursor: pointer;
+        font-size: 14px;
+        /* margin-right: 4rem; */
+        padding: 8px 20px;
+        width: 160px;
+        text-align: center;
+        transition: ease-out all .2s;
+    }
+
+    .btn-2:hover {
+        /* color: #fff;
+        background-color: #1A1A1A; */
+        box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+        transform: translateY(-2px);
+    }
+
+    .btn-2:active {
+        box-shadow: none;
+        transform: translateY(0);
+    }
+}
